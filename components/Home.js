@@ -1,5 +1,6 @@
 import React from "react";
 import { View ,Text,StyleSheet, TouchableOpacity} from "react-native";
+import { FontAwesome } from '@expo/vector-icons';
 
 const Home=({navigation})=>{
 
@@ -16,6 +17,20 @@ const Home=({navigation})=>{
 }}>
     <Text>Change Password</Text>
 </TouchableOpacity>
+
+<TouchableOpacity style={styles.links} onPress={()=>{
+    navigation.navigate("ForgotPassword")
+}}>
+    <Text>Forgot Password</Text>
+</TouchableOpacity>
+
+<TouchableOpacity style={styles.links} onPress={()=>{
+    navigation.navigate("EnterOtp")
+}}>
+    <Text>Enter OTP</Text>
+</TouchableOpacity>
+<FontAwesome style={{color:"black"}}/>
+{/* <BottomTab/> */}
         </View>
        
            
@@ -25,7 +40,11 @@ export default Home;
 const styles=StyleSheet.create({
     container:{
         alignItems:"center",
-        marginTop:50
+        marginTop:50,
+        backgroundColor:"white",
+        // backgroundColor:"#F3F8FE",
+        // borderBottomEndRadius:50,
+        height:"100%"
     },
     links:{
         width:200,

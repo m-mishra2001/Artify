@@ -5,7 +5,7 @@ import { Avatar } from 'react-native-paper';
 import AvtarImg from '../images/avtar.jpg'
 import { TextInput, Button } from "react-native-paper";
 import Profile from "./Profile";
-const ChangePassword=()=>{
+const ForgotPassword=()=>{
 
     return( <SafeAreaView style={styles.container}>
         <ScrollView showsVerticalScrollIndicator={false} style={{ marginTop: 0 }}>
@@ -13,7 +13,7 @@ const ChangePassword=()=>{
        
         <View style={{alignItems:"center",height:100,margin:0,padding:0,width:"100%",position:"absolute"}} >
         
- <Text style={styles.headerText}>Change Password</Text>
+ <Text style={styles.headerText}>Forgot Password</Text>
  
 
    </View>
@@ -23,37 +23,24 @@ const ChangePassword=()=>{
    
    <Text style={styles.ProfileName}>Muskan Mishra</Text>
    </View> */}
+   <View style={{marginTop:40}}> 
    <Profile/>
+   </View>
+  
    <View style={styles.footer}>
    {/* <View style={styles.textboxAndbtn}>
 
    </View> */}
    
         <TextInput
-            label="Old Password"
-            name="oldPassword"
+            label="Enter your mail id"
+            name="mailId"
             // value={email}
             // onChangeText={(email) => setEmail(email)}
             style={styles.loginInput}
             underlineColor="transparent"
           />
-            <TextInput
-            label="New Password"
-            name="newPassword"
-            // value={email}
-            // onChangeText={(email) => setEmail(email)}
-            style={styles.loginInput}
-            underlineColor="transparent"
-          />
-            <TextInput
-            label="Confirm Password"
-            name="confirmPassword"
-            // value={email}
-            // onChangeText={(email) => setEmail(email)}
-            style={styles.loginInput}
-            underlineColor="transparent"
-          />
-
+           
            <Button
             mode="contained"
             buttonColor="#363488"
@@ -63,19 +50,21 @@ const ChangePassword=()=>{
               textTransform: "uppercase",
               letterSpacing: 1,
               textAlign: "center",
+              top:10
               
             }}
             style={styles.btn}
-            
+           
           >
-           Change Password
+           Next
           </Button>
-    <View style={{marginTop:20,height:90}}>
-   <TouchableOpacity>
+          
+    <View style={{marginTop:20,height:70}}>
+   {/* <TouchableOpacity>
               <Text style={{ color: "#363488", fontWeight: "bold",fontSize:17 }}>
                 Forgot Password
               </Text>
-   </TouchableOpacity>
+   </TouchableOpacity> */}
    </View>
   
    </View>
@@ -95,14 +84,14 @@ const styles=StyleSheet.create({
     headerText:{
         // fontFamily: 'Poppins',
         fontWeight:"bold",
-        fontSize: 25,
+        fontSize: 30,
         lineHeight: 48,
         color:"#363488",
         // left: 49,
-         top: 70
+         top: 100
     },
     profileView:{
-      marginTop:10,
+        marginTop:50,
         flexDirection:"row",
         width:"90%",
         position:"relative",
@@ -129,8 +118,9 @@ const styles=StyleSheet.create({
         height:"auto",
         marginTop: 10,
         backgroundColor: "white",
-        borderTopEndRadius: 30,
-        borderTopStartRadius: 30,
+        // borderTopEndRadius: 30,
+        // borderTopStartRadius: 30,
+        borderRadius:30,
         padding: 5,
         paddingTop: 25,
         flex: 1,
@@ -155,4 +145,4 @@ const styles=StyleSheet.create({
       }
      
 })
-export default ChangePassword;
+export default ForgotPassword;

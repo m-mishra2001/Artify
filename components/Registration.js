@@ -75,6 +75,7 @@ console.log(name)
  <View>
  <View style={styles.line}></View><Text style={{position:"absolute", marginTop:10, left:194}}>OR</Text><View style={styles.line2}></View>
  {/* <View style={styles.GoogleIncon}> */}
+ 
  <TouchableOpacity style={styles.GoogleIncon}>
  <AntDesign name="google" style={{top:10}} color={"red"} size={24}/>
  </TouchableOpacity>
