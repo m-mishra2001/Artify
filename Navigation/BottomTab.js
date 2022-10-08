@@ -7,13 +7,11 @@ import { FontAwesome5 } from '@expo/vector-icons';
 import { AntDesign } from '@expo/vector-icons';
 import { Feather } from '@expo/vector-icons';
 import { Ionicons } from '@expo/vector-icons';
-// import Registration from "../components/Registration";
-// import ChangePassword from "../components/ChangePassword";
-// import ForgotPassword from "../components/ForgotPassword";
 import WishList from "../Screens/WishList";
 import UserProfile from "../Screens/UserProfile";
 import Likes from "../Screens/Like";
 import Post from "../Screens/Post";
+import EditProfile from "../Screens/EditProfile";
 
 const AddPost=()=>{
     return(
@@ -31,6 +29,7 @@ const Tab=createBottomTabNavigator();
 <Tab.Navigator
 screenOptions={{
     tabBarShowLabel:false,
+    headerShown:false,
     tabBarStyle: { backgroundColor:"#F3F8FE",
     borderTopRightRadius:30,
     borderTopLeftRadius:30,
@@ -39,7 +38,7 @@ screenOptions={{
      },
 }}
 >
-    <Tab.Screen name="Home" component={Home} options={{
+    <Tab.Screen name="Home" component={EditProfile} options={{
         tabBarIcon:({focused})=>(
             <View>
              <FontAwesome name="home" size={30} color={focused?"#363488":"black"} />

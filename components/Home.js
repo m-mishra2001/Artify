@@ -29,7 +29,7 @@ const Home=({navigation})=>{
 }}>
     <Text>Enter OTP</Text>
 </TouchableOpacity>
-<FontAwesome style={{color:"black"}}/>
+
 {/* <BottomTab/> */}
         </View>
        
