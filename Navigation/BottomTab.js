@@ -1,7 +1,8 @@
 import React from "react";
-import { TouchableOpacity, View } from "react-native";
+import {  TouchableOpacity, View } from "react-native";
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import Home from '../components/Home'
+import Home from "../Screens/Home";
+
 import { FontAwesome } from '@expo/vector-icons';
 import { FontAwesome5 } from '@expo/vector-icons';
 import { AntDesign } from '@expo/vector-icons';
@@ -12,18 +13,28 @@ import UserProfile from "../Screens/UserProfile";
 import Likes from "../Screens/Like";
 import Post from "../Screens/Post";
 import EditProfile from "../Screens/EditProfile";
+import ContactForm from "../Screens/ContactForm";
+import Setting from "../Screens/Setting";
+import Faqs from "../Screens/Faqs";
+import Details from "../Screens/Details";
+import CreditPayment from "../Screens/CreditPayment";
+import Checkout from "../Screens/Checkout";
+import SearchComponent from "../components/SearchComponent";
+import SearchPage from "../Screens/SearchPage";
+import SellerProfile from "../Screens/SellerProfile";
+import SettingsScreen, { AddPostScreen, HomeScreen, UserProfileScreen, WishListScreen } from "./CustomNavigation";
 
 const AddPost=()=>{
     return(
-        <TouchableOpacity>
+        <TouchableOpacity >
 <View style={{backgroundColor:"#363488",width:61,height:57,borderRadius:20,alignItems:"center"}}>
 <Ionicons name="add-sharp" size={50} color="white" />
 </View>
-        </TouchableOpacity>
+          </TouchableOpacity>
         
     )
 }
-const BottomTab=()=>{
+const BottomTab=({navigation})=>{
 const Tab=createBottomTabNavigator();
     return(
 <Tab.Navigator
@@ -38,7 +49,7 @@ screenOptions={{
      },
 }}
 >
-    <Tab.Screen name="Home" component={EditProfile} options={{
+    <Tab.Screen name="HomeScreen" component={HomeScreen} options={{
         tabBarIcon:({focused})=>(
             <View>
              <FontAwesome name="home" size={30} color={focused?"#363488":"black"} />
@@ -46,7 +57,7 @@ screenOptions={{
         )
     }} />
 
-    <Tab.Screen name="WishList" component={WishList} 
+    <Tab.Screen name="WishListScreen" component={WishListScreen} 
         options={{
         tabBarIcon:({focused})=>(
             <View>
@@ -57,11 +68,17 @@ screenOptions={{
     }}
     />
 
-<Tab.Screen name="Post" component={Post} 
+<Tab.Screen name="AddPostScreen" component={AddPostScreen} 
         options={{
         tabBarIcon:({focused})=>(
             <View style={{marginBottom:"100%",height:"70%"}}>
+          
+
             <AddPost/>
+           
+           
+            
+           
              {/* <FontAwesome5 name="shopping-cart" size={26} color={focused?"blue":"black"} /> */}
             </View>
         )
@@ -71,23 +88,26 @@ screenOptions={{
    
     
 
-<Tab.Screen name="Likes" component={Likes}
+<Tab.Screen name="Likes" component={SettingsScreen}
     options={{
         tabBarIcon:({focused})=>(
-            <View>
-           <AntDesign name="heart" size={30} color={focused?"#363488":"black"}  />
-            
+            <View >
+           {/* <AntDesign name="heart" size={30} color={focused?"#363488":"black"}  /> */}
+          
+           <Ionicons name="settings" size={30} color={focused?"#363488":"black"} />
             </View>
         )
     }}
      />   
 
-<Tab.Screen name="UserProfile" component={UserProfile}
+<Tab.Screen name="UserProfileScreen" component={UserProfileScreen}
     options={{
         tabBarIcon:({focused})=>(
-            <View>
-             <Feather name="user" size={30} color={focused?"#363488":"black"} />
-            
+            <View >
+             {/* <Feather name="user" size={30} color={focused?"#363488":"black"} /> */}
+             {/* <FontAwesome name="user" size={30} color={focused?"#363488":"black"}/> */}
+             {/* <FontAwesome name="user-circle-o" size={30} color={focused?"#363488":"black"} /> */}
+             <FontAwesome5 name="user-alt" size={30} color={focused?"#363488":"black"} />
             </View>
         )
     }}

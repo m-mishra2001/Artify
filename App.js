@@ -5,7 +5,7 @@ import Home from './components/Home'
 import { NavigationContainer} from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { Provider as PaperProvider } from 'react-native-paper';
-import ChangePassword from './components/ChangePassword';
+
 import ForgotPassword from './components/ForgotPassword';
 import EnterOtp from './components/EnterOtpForgotPass';
 import BottomTab from './Navigation/BottomTab';

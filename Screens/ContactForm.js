@@ -1,61 +1,56 @@
 import React from 'react'
 import { Text,View,StyleSheet,SafeAreaView,ScrollView,Image,TouchableOpacity } from "react-native";
-import { TextInput, Button } from "react-native-paper";
 import graphics from '../images/Vectorgraphics1(2).png'
-import { Avatar } from 'react-native-paper';
-import AvtarImg from '../images/avtar.jpg'
-import { Entypo } from '@expo/vector-icons';
-import Profile from '../components/Profile';
-const EditProfile=()=>{
+import { TextInput, Button } from "react-native-paper";
+import { AntDesign } from '@expo/vector-icons';
+const ContactForm=()=>{
     return(
 <SafeAreaView style={styles.container}>
         <ScrollView showsVerticalScrollIndicator={false} style={{ marginTop: 0 }}>
         <Image source={graphics} style={{width:200,height:150,margin:0}}/>
        
         <View style={{alignItems:"center",height:100,margin:0,padding:0,width:"100%",position:"absolute"}} >
-        
- <Text style={styles.headerText}>Edit Profile</Text>
+        <Text style={{...styles.headerText,fontSize:30}}>Contact Us </Text>
+ <Text style={styles.headerText}>We would <AntDesign name="heart" size={24} color="red" /> to help You</Text>
    </View>
-
-   
-   <View style={styles.profileView}>
-   <TouchableOpacity>
-   <Avatar.Image size={130} source={AvtarImg} style={{marginLeft:20}}  />
-   </TouchableOpacity>
-   <TouchableOpacity>
-   <Entypo name="camera" size={30} color="black" />
-   </TouchableOpacity>
-   
-   {/* <Text style={styles.ProfileName}>Muskan Mishra</Text> */}
-   </View>
+  
    <View style={styles.footer}>
   
         <TextInput
-            label="Name"
+            label="Enter your Name"
             name="name"
-            value="Muskan Mishra"
+            // value="Muskan Mishra"
             // onChangeText={(email) => setEmail(email)}
             style={styles.loginInput}
             underlineColor="transparent"
           />
-            <TextInput
-            label="Email"
-            name="email"
-            value="mishra2001muskan@gmail.com"
-            // onChangeText={(email) => setEmail(email)}
-            style={styles.loginInput}
-            underlineColor="transparent"
-          />
-            <TextInput
-            label="Contact number"
+
+          <TextInput
+            label="Enter your mobile number"
             name="contactno"
-            value="9826460576"
+            // value="9826460576"
             keyboardType='numeric'
             // onChangeText={(email) => setEmail(email)}
             style={styles.loginInput}
             underlineColor="transparent"
           />
-
+            <TextInput
+            label="Enter you Email"
+            name="email"
+            // value="mishra2001muskan@gmail.com"
+            // onChangeText={(email) => setEmail(email)}
+            style={styles.loginInput}
+            underlineColor="transparent"
+          />
+       
+       <TextInput
+            label="Your Query"
+            name="query"
+            // value="mishra2001muskan@gmail.com"
+            // onChangeText={(email) => setEmail(email)}
+            style={styles.loginInput}
+            underlineColor="transparent"
+          />
            <Button
             mode="contained"
             buttonColor="#363488"
@@ -70,10 +65,10 @@ const EditProfile=()=>{
             style={styles.btn}
             
           >
-           Edit Profile
+           Send Message
           </Button>
-    <View style={{marginTop:20,height:80}}>
-  
+    <View style={{height:150,marginTop:10}}>
+  <Text style={{fontWeight:"bold",fontSize:20}}>We'll reach You Soon</Text>
    </View>
   
    </View>
@@ -97,44 +92,27 @@ const styles=StyleSheet.create({
         lineHeight: 48,
         color:"#363488",
         // left: 49,
-         top: 70
+         top: 80
     },
-    profileView:{
-        marginTop:10,
-        width:"100%",
-        height:"auto",
-       alignItems:"center"
-        
-    },
-  //   ProfileName:{
-  //   fontWeight:"bold",
-  //   fontSize:22,
-  //   textAlign:"center",
-  //   marginTop:"auto",
-  //   marginBottom:"auto",
-  //  marginLeft:20,
-  //   marginRight:"auto",
-  //   color:"#363488",
-  //   },
+ 
 
     footer:{
-    
         width: "100%",
         height:"auto",
-        marginTop:"10%",
         backgroundColor: "white",
         borderTopEndRadius: 30,
         borderTopStartRadius: 30,
         padding: 5,
         paddingTop: 25,
         flex: 1,
+        top:65,
         flexDirection: "column",
         justifyContent: "center",
         alignItems: "center",
          
      },
      loginInput: {
-        margin: "6%",
+        margin: "5%",
         height:65,
         width: "88%",
         backgroundColor:"#F5F5F5",
@@ -145,7 +123,8 @@ const styles=StyleSheet.create({
         width:"88%",
         marginTop:10,
         borderRadius:8,
+      
       }
      
 })
-export default EditProfile;
+export default ContactForm;

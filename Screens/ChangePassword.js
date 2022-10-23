@@ -4,7 +4,7 @@ import graphic from "../images/Vectorgraphics1(2).png"
 import { Avatar } from 'react-native-paper';
 import AvtarImg from '../images/avtar.jpg'
 import { TextInput, Button } from "react-native-paper";
-import Profile from "./Profile";
+import Profile from "../components/Profile";
 const ChangePassword=()=>{
 
     return( <SafeAreaView style={styles.container}>
@@ -70,7 +70,7 @@ const ChangePassword=()=>{
           >
            Change Password
           </Button>
-    <View style={{marginTop:20,height:90}}>
+    <View style={{marginTop:20,height:130}}>
    <TouchableOpacity>
               <Text style={{ color: "#363488", fontWeight: "bold",fontSize:17 }}>
                 Forgot Password

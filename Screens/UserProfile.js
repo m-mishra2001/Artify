@@ -13,7 +13,7 @@ import BuyProduct from "../components/BuyProduct";
 import BuyingHistory from "../components/BuyingHistory";
 
 
-const UserProfile=()=>{
+const UserProfile=({navigation})=>{
 const [showpost,setshowpost]=useState(true)
 const [currBuyProduct,setCurrBuyProduct]=useState(false)
 const [buyingHistory,setBuyingHistory]=useState(false)
@@ -44,6 +44,7 @@ const [buyingHistory,setBuyingHistory]=useState(false)
               
             }}
             style={{...styles.btn}}
+            onPress={()=>navigation.navigate("EditProfile") }
         > Edit Profile</Button> 
 
 <Button
@@ -60,6 +61,7 @@ const [buyingHistory,setBuyingHistory]=useState(false)
               
             }}
             style={{...styles.btn,marginLeft:"45%"}}
+            onPress={()=>navigation.navigate("ContactForm")}
         > Contact Us</Button> 
         
         </View>
