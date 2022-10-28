@@ -9,11 +9,13 @@ import { Provider as PaperProvider } from 'react-native-paper';
 import ForgotPassword from './components/ForgotPassword';
 import EnterOtp from './components/EnterOtpForgotPass';
 import BottomTab from './Navigation/BottomTab';
+import AuthNav from './Navigation/AuthNav';
  function App() {
   const Stack=createNativeStackNavigator();
   return (
     <NavigationContainer>
-      <BottomTab/>
+      {/* <BottomTab/> */}
+      <AuthNav/>
       {/* <Stack.Navigator intialRouteName="BottomTab">
       <Stack.Screen name="Home" component={Home }/>
       

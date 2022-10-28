@@ -2,7 +2,8 @@ import React, { useState } from "react";
 import { Button, StyleSheet, Text, Input,TextInput, View ,Image, TouchableOpacity, ImageBackground} from 'react-native';
 import { AntDesign } from '@expo/vector-icons';
 import graphic from "../images/Vectorgraphics1.png"
-const Registration=()=>{
+import Home from "./Home";
+const Registration=({navigation})=>{
 
 const handlechange=(e)=>{
 var name=e.target.name;
@@ -67,7 +68,7 @@ console.log(name)
     
     color="#363488"
      title="Sign Up"/> */}
-     <TouchableOpacity style={{backgroundColor:"#363488",textcolor:"white",height:40,borderRadius:10,padding:8,alignItems:"center"}}>
+     <TouchableOpacity style={{backgroundColor:"#363488",textcolor:"white",height:40,borderRadius:10,padding:8,alignItems:"center"}} onPress={()=>navigation.navigate("Home")}>
         <Text style={{color:"white"}}>Sign Up</Text>
      </TouchableOpacity>
     </View>
